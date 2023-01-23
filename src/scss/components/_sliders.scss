@@ -1,0 +1,96 @@
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__grid {
+    // border: solid red;
+    background: #f4f4f4;
+    padding: 2em 0;
+    display: grid;
+    grid-gap: 0.5em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+            1em,
+            1fr
+        );
+}
+
+.from-left {
+    grid-column: 2 / 3;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.from-right {
+    grid-column: 3 / 4;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+    transition: opacity 400ms ease-in, -webkit-transform 500ms ease-in;
+    transition: opacity 400ms ease-in, transform 500ms ease-in;
+    transition: opacity 400ms ease-in, transform 500ms ease-in,
+        -webkit-transform 500ms ease-in;
+    opacity: 0;
+}
+/* Effects */
+.from-left.show,
+.from-right.show {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+/* cards  */
+.card__git {
+    height: 40px;
+    width: auto;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+}
+.card__image {
+    height: 250px;
+    width: 351px;
+    object-fit: cover;
+    object-position: center;
+}
+.icons {
+    text-align: center;
+}
+
+@media only screen and (max-width: 811px) {
+    /* skal cards endres til colum */
+    .card__grid {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "txt";
+    }
+    .grid__text {
+        grid-area: txt;
+    }
+    .grid__image {
+        grid-area: image;
+        display: flex;
+        margin: 0 auto;
+    }
+    p {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .grid__image {
+        width: 100%;
+    }
+}

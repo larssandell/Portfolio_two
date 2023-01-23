@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-arrow: rgba(255, 255, 255, 0.938);
+    --main-bg: #1b1b1b;
+    --header-bg: #212529;
+}
+html {
+    /* height: 100%;
+    width: 100%; */
+    font-family: "roboto";
+    color: #fff;
+}
+body {
+    background-color: #1b1b1b;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "main";
+    height: auto; */
+    /* min-height: 100vh; */
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    position: relative;
+    /* margin: 0 10px 0 10px; */
+    // display: flex;
+    // flex-direction: column;
+}
