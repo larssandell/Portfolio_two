@@ -94,14 +94,12 @@ main {
     grid-template-columns: auto;
     grid-template-rows: auto;
     position: relative;
-    /* margin: 0 10px 0 10px; */
 }
 
 /* Bio section */
 .bio__wrapper {
     margin-top: 50px;
     display: grid;
-    /* grid-template-columns: 3fr 1fr; */
     height: fit-content;
     grid-template-rows: min-content;
     background-color: var(--header-bg);
@@ -314,7 +312,6 @@ footer {
 }
 
 @media only screen and (max-width: 811px) {
-    /* skal cards endres til colum */
     .card__grid {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 1fr;
