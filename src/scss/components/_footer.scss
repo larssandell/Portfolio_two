@@ -1,0 +1,17 @@
+footer {
+    background-color: var(--header-bg);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.footer__icon {
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.footer__icon:hover {
+    opacity: 0.8;
+}
